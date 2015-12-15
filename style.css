@@ -1,0 +1,465 @@
+/*
+
+Добавить лого к картинкам
+Оптимизировать картинки (Сохранить в формат для Веб)
+Оптимизировать загрузку картинок
+
+
+
+
+*/
+@font-face {
+  font-family: 'LionelTextDiesel';
+  src: url(fonts/lionelTextDiesel.ttf);
+}
+@font-face {
+  font-family: Pribambas;
+  src: url(fonts/Pribambas.ttf);
+}
+@font-face {
+  font-family: PTsans;
+  src: url(fonts/ptsans.ttf);
+}
+body {
+  font-family: PTsans, sans-serif;
+  font-weight: lighter;
+  max-width: 1600px;
+    min-width: 1000px;
+  margin: auto;
+  color: #333;
+}
+.carousel .global-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 19;
+}
+.carousel .global-caption h1 {
+  text-shadow: 3px 2px 3px #000000;
+  font-family: Pribambas, sans-serif;
+  color: #ff7c24;
+  font-size: 48px;
+  font-weight: normal;
+  position: absolute;
+  line-height: 139px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  margin: 0;
+  margin-top: -67px;
+  text-align: center;
+}
+.carousel .global-caption .btn-border {
+  display: inline-block;
+  font-family: PTsans;
+  font-size: 50px;
+  color: #000000;
+  padding: 5px 20px;
+  border: 2px solid #000000;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+  position: absolute;
+  bottom: 15%;
+  right: 7%;
+  z-index: 35;
+}
+.carousel .global-caption .btn-border:hover {
+  background: #fff;
+  color: #333;
+  border: 2px solid #333;
+}
+.block {
+  max-width: 1280px;
+  margin: auto;
+}
+.block h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 45px auto 0;
+}
+.block h2 small {
+  display: block;
+  text-transform: none;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.block h2:after {
+  content: '';
+  display: block;
+  height: 5px;
+  background: #333;
+  width: 278px;
+  margin: 0 auto 56px;
+}
+.block.unique {
+  margin: 0 auto 60px;
+}
+div {
+  text-align: center;
+  font-size: 48px;
+}
+div .img-wrap {
+  height: 324px;
+}
+div h3 {
+  margin: 20px auto 25px;
+}
+div p {
+  display: block;
+  width: 255px;
+  margin: auto;
+  text-align: left;
+  font-size: 20px;
+}
+.thumb {
+  font-family: Pribambas, sans-serif;
+  position: relative;
+  color: #ff7c24;
+}
+.thumb h2 {
+  font-weight: normal;
+  text-shadow: 3px 2px 3px #000000;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 21px 0;
+  font-size: 48px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.thumb h2 span {
+  display: inline-block;
+  font-weight: 400;
+  width: 800px;
+  line-height: 60px;
+}
+.thumb img {
+  width: 100%;
+}
+.block.work {
+  margin-bottom: 100px;
+}
+.block.work h2:after {
+  width: 333px;
+}
+.block.work .round-line {
+  width: 100%;
+  position: relative;
+  margin-top: 150px;
+}
+.block.work .round-line .pre,
+.block.work .round-line .post {
+  position: absolute;
+  display: inline-block;
+  color: #333333;
+  font: 400 20px / 40px Verdana;
+  top: -50px;
+}
+.block.work .round-line .pre {
+  left: 50px;
+}
+.block.work .round-line .post {
+  right: 50px;
+}
+.block.work .round-line .num-thumb {
+  position: relative;
+  vertical-align: top;
+  z-index: 6;
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.block.work .round-line .num-thumb span {
+  z-index: 6;
+  display: inline-block;
+  padding: 20px 28px;
+  color: #333333;
+  font: 400 80px / 60px LionelTextDiesel;
+  background: #fff;
+  border-radius: 50%;
+  border: 8px solid #333;
+}
+.block.work .round-line .num-thumb p {
+  width: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.block.work .round-line .line {
+  margin: -171px auto 171px auto;
+  width: 71%;
+  height: 24px;
+  background: #333;
+}
+.wide-wrap {
+  padding-top: 35px;
+  padding-bottom: 100px;
+  width: 100%;
+  border-top: 5px solid #555;
+  background: #e3e3e3;
+}
+.wide-wrap .block.our-works {
+  width: 90%;
+  margin: auto;
+}
+.wide-wrap .block.our-works h2 {
+  margin: 0 0 0 35px;
+  font-weight: normal;
+}
+.wide-wrap .block.our-works h2:after {
+  height: 2px;
+  width: 250px;
+}
+.wide-wrap .block.our-works a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 33%;
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
+  height: 350px;
+}
+.block.price {
+  padding: 60px;
+}
+.block.price h2:after {
+  height: 3px;
+  width: 350px;
+}
+.block.price .row {
+  position: relative;
+}
+.block.price .row span {
+  position: absolute;
+  left: 130px;
+  top: 0;
+  font-size: 20px;
+}
+.block.price .row .img-wrap {
+  position: relative;
+  height: 515px;
+  margin-bottom: 55px;
+}
+.block.price .row .img-wrap img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.block.price .row .col-md-4:first-of-type img {
+  left: 50%;
+  margin-left: -85px;
+}
+.block.price .row .col-md-4:nth-of-type(2) img {
+  left: 50%;
+  margin-left: -124px;
+}
+.block.price .row .col-md-4:nth-of-type(3) img {
+  left: 50%;
+  margin-left: -171px;
+}
+.block.price .row p {
+  font-family: LionelTextDiesel;
+  font-size: 53px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.block.price .row a {
+  font-size: 35px;
+  padding: 0 4px;
+  border: 3px solid #333;
+  color: #333;
+  display: inline-block;
+  font-family: PTsans;
+  font-size: 5;
+  color: #000000;
+  padding: 5px 20px;
+  border: 2px solid #000000;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+}
+.block.price .row a:hover {
+  background: #fff;
+  color: #333;
+  border: 2px solid #333;
+}
+.transform.thumb {
+  background: url(images/wood.png);
+  background-size: cover;
+  padding-bottom: 178px;
+}
+.transform.thumb div img {
+  top: 0;
+}
+.transform.thumb h2 {
+  position: static;
+  padding: 76px 0 41px;
+  font-weight: normal;
+  margin-bottom: 87px;
+}
+.transform.thumb img:not(.rarrow) {
+  border: 10px solid #333;
+  box-sizing: border-box;
+  width: 100%;
+}
+.transform.thumb .rarrow {
+  border-radius: 50%;
+  margin-top: 96px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.block.warranty {
+  padding: 0;
+}
+.block.warranty h2 {
+  color: #333333;
+  font: 400 48px / 60px Pribambas;
+  position: static;
+}
+.block.warranty h2:after {
+  width: 700px;
+  height: 3px;
+}
+.block.warranty p {
+  text-align: center;
+  font-size: 24px;
+}
+.block.phone {
+  padding-top: 36px;
+  padding-bottom: 91px;
+}
+.block.phone h2 {
+  font-family: Pribambas;
+  padding: 0;
+  margin: 0;
+  background: none;
+  position: static;
+  font-weight: normal;
+}
+.block.phone h2:after {
+  margin: 60px auto 0;
+  width: 100px;
+  height: 3px;
+}
+.block.phone h2 small {
+  display: block;
+  font-size: 36px;
+  margin-top: 30px;
+}
+.block.phone .phoneForm {
+  width: 500px;
+  margin: 61px auto 0;
+  border: 1px solid #eee;
+  position: relative;
+  text-align: left;
+}
+.block.phone .phoneForm .btn {
+  color: #333333;
+  font: 30px / 35px PTSans;
+  background: #ff7c24;
+  border-radius: 3px;
+  padding: 14px 10px;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.block.phone .phoneForm .btn:hover {
+  background: #f06000;
+}
+.block.phone .phoneForm input {
+  width: 205px;
+  margin-left: 40px;
+  vertical-align: middle;
+  height: 37px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: none;
+}
+.block.phone .phoneForm input::-moz-placeholder {
+  color: #000;
+}
+.block.phone .phoneForm input::-webkit-input-placeholder {
+  color: #000;
+}
+.block.phone .phoneForm input::input-placeholder {
+  color: #000;
+}
+.block.phone .phoneForm input::placeholder {
+  color: #000;
+}
+.block.phone .phoneForm input::focus {
+  outline: none;
+}
+.block.phone .phoneForm i {
+  padding-left: 36px;
+  display: inline-block;
+  background: url(images/icon-157358_640.png) no-repeat center center;
+  width: 21px;
+  height: 29px;
+}
+.wide-wrap:last-of-type {
+  padding-bottom: 0;
+}
+.thumb h2 {
+  margin-top: 0px;
+  position: static;
+  background: none;
+}
+.thumb h2:after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 320px;
+  margin-top: 30px;
+  background: #ff7c24;
+  margin: auto;
+}
+.thumb div img {
+  position: relative;
+  top: -100px;
+  width: 70%;
+}
+.thumb .contact-info {
+  margin-top: 70px;
+}
+.thumb .contact-info .contacts {
+  margin-bottom: 50px;
+  text-align: left;
+}
+.thumb .contact-info .contacts p {
+  color: #000;
+  font-size: 50px;
+  width: auto;
+}
+.thumb .contact-info .contacts span {
+  color: #ff7c24;
+}
+.thumb .contact-info .contacts span a {
+  color: inherit;
+  text-decoration: none;
+}
+.bottom {
+  padding-bottom: 20px;
+}
+.bottom p {
+  text-align: center;
+  width: auto;
+}
+.bottom p strong {
+  font-family: Pribambas;
+  text-transform: uppercase;
+  font-weight: bold;
+}
