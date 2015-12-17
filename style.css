@@ -473,3 +473,6 @@ div p {
 .block.phone{
   display: none;
 } 
+.wide-wrap:last-of-type{
+  background: #555;
+}
