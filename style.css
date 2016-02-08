@@ -2,7 +2,7 @@
 @font-face{font-family:Pribambas;src:url(fonts/Pribambas.ttf);}
 @font-face{font-family:PTsans;src:url(fonts/ptsans.ttf);}
 html, body{height: 100%;}
-body{font-family:PTsans, sans-serif;font-weight:lighter;max-width:1900px;min-width:1000px;margin:auto;color:#333;}
+body{font-family:PTsans, sans-serif;font-weight:lighter;max-width:1900px;min-width:1000px;margin:0;color:#333;}
 .carousel .global-caption{position:absolute;top:0;left:0;bottom:0;right:0;z-index:19;}
 .carousel .global-caption h1{text-shadow:3px 2px 3px #000000;font-family:Pribambas, sans-serif;color:#ff7c24;font-size:48px;font-weight:normal;position:absolute;line-height:139px;width:100%;background:rgba(0, 0, 0, 0.5);top:50%;margin:0;margin-top:-67px;text-align:center;}
 .carousel .global-caption .btn-border{display:inline-block;font-family:PTsans;font-size:50px;color:#000000;padding:5px 20px;border:2px solid #000000;text-decoration:none;background:rgba(255, 255, 255, 0.2);-webkit-transition:background .3s ease;-moz-transition:background .3s ease;-o-transition:background .3s ease;transition:background .3s ease;position:absolute;bottom:15%;right:7%;z-index:35;}
